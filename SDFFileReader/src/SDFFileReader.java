@@ -10,11 +10,10 @@ import java.util.Arrays;
 
 public class SDFFileReader {
     public static void main(String[] args) {
-        double[][] measuredMeniscus = readDataFromSDFFile();
+        readDataFromSDFFile();
     }
 
-    public static double[][] readDataFromSDFFile() {
-        double[][] MeasuredMeniscus = new double[1][2];
+    public static void readDataFromSDFFile() {
         try {
             File SDFFile = new File("Z:/Shared/Code/Biogen/Medicinal Chemistry/Material from Michael/100080_71_products from eLN.sdf");
             FileReader fileReader = new FileReader(SDFFile);
@@ -95,8 +94,6 @@ public class SDFFileReader {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-
-        return MeasuredMeniscus;
     }
 }
 
